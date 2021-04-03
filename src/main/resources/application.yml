@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: eurekaOauth
+  security:
+    enabled: true
+    authentication: idtoken
+    oauth2:
+      enabled: true
+      clients:
+        default:
+          client-id: doesnt-matter
+          client-secret: doesnt-matter
+          openid:
+            issuer: http://localhost:9080/auth/realms/default/
+eureka:
+  client:
+    registration:
+      enabled: true
+    defaultZone: ${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}
