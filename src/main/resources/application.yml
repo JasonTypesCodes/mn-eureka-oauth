@@ -7,7 +7,7 @@ micronaut:
     oauth2:
       enabled: true
       clients:
-        default:
+        something:
           client-id: doesnt-matter
           client-secret: doesnt-matter
           openid:
